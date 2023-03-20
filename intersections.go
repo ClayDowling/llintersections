@@ -1,14 +1,28 @@
 package main
 
-// import (
-// 	"bufio"
-// 	"os"
-// )
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func Intersection([]string) bool {
+	return false
+}
 
 func main() {
-	// rdr := bufio.NewReader(os.Stdin)
+	source := bufio.NewScanner(os.Stdin)
 
-	// switch line, err := rdr.ReadString('\n') {
+	Parse(source)
 
-	// }
+	for _, q := range Questions {
+		for idx, node := range q {
+			if idx > 0 {
+				fmt.Print(",")
+			}
+			fmt.Printf("%s", node)
+		}
+		fmt.Printf(": %t\n", Intersection(q))
+	}
+
 }

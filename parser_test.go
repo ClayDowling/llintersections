@@ -72,3 +72,22 @@ func Test_ParseOnEdgePopulatesEdges(t *testing.T) {
 		t.Errorf("Expected b, got \"%s\"", Edges["a"])
 	}
 }
+
+func Test_ParseOnQuestionPopulatesQuestions(t *testing.T) {
+	src := bufio.NewScanner(strings.NewReader("b,c\na,b,c"))
+	Parse(src)
+	if len(Questions) != 2 {
+		t.Errorf("Expected 2 questions, found %d", len(Questions))
+		return
+	}
+	q1 := Questions[0]
+	q2 := Questions[1]
+
+	if q1[0] != "b" || q1[1] != "c" {
+		t.Errorf("Expected Q1 to be b,c, found %v", q1)
+	}
+
+	if q2[0] != "a" || q2[1] != "b" || q2[2] != "c" {
+		t.Errorf("Expected Q2 to be a,b,c, found %v", q2)
+	}
+}

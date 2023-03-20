@@ -11,6 +11,7 @@ const EDGE = 1
 const QUERY = 2
 
 var Edges map[string]string
+var Questions [][]string
 
 func LineType(line string) int {
 	if strings.Contains(line, "->") {
@@ -41,12 +42,16 @@ func ParseQuery(line string) []string {
 
 func Parse(scanner *bufio.Scanner) {
 	Edges = make(map[string]string)
+	Questions = make([][]string, 0)
 	for scanner.Scan() {
 		line := scanner.Text()
 		switch LineType(line) {
 		case EDGE:
 			k, v := ParseEdge(line)
 			Edges[k] = v
+		case QUERY:
+			q := ParseQuery(line)
+			Questions = append(Questions, q)
 		default:
 			fmt.Errorf("Unknown input \"%s\"\n", line)
 		}
