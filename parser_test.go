@@ -66,7 +66,7 @@ func Test_QueryLineReturnsSliceOfElements(t *testing.T) {
 }
 
 func Test_ParseOnEdgePopulatesEdges(t *testing.T) {
-	src := bufio.NewReader(strings.NewReader("a -> b"))
+	src := bufio.NewScanner(strings.NewReader("a -> b"))
 	Parse(src)
 	if Edges["a"] != "b" {
 		t.Errorf("Expected b, got \"%s\"", Edges["a"])

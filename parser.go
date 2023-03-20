@@ -39,8 +39,10 @@ func ParseQuery(line string) []string {
 	return nodes
 }
 
-func Parse(src *bufio.Reader) {
-	for line, err := src.ReadString('\n'); err == nil; {
+func Parse(scanner *bufio.Scanner) {
+	Edges = make(map[string]string)
+	for scanner.Scan() {
+		line := scanner.Text()
 		switch LineType(line) {
 		case EDGE:
 			k, v := ParseEdge(line)
