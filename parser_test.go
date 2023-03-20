@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bufio"
+	"strings"
 	"testing"
 )
 
@@ -60,5 +62,13 @@ func Test_QueryLineReturnsSliceOfElements(t *testing.T) {
 
 	if !inorder {
 		t.Errorf("Expected [c,d,e,f,g] but got %v", nodes)
+	}
+}
+
+func Test_ParseOnEdgePopulatesEdges(t *testing.T) {
+	src := bufio.NewReader(strings.NewReader("a -> b"))
+	Parse(src)
+	if Edges["a"] != "b" {
+		t.Errorf("Expected b, got \"%s\"", Edges["a"])
 	}
 }

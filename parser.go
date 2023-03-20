@@ -1,10 +1,16 @@
 package main
 
-import "strings"
+import (
+	"bufio"
+	"fmt"
+	"strings"
+)
 
 const UNKNOWN = -1
 const EDGE = 1
 const QUERY = 2
+
+var Edges map[string]string
 
 func LineType(line string) int {
 	if strings.Contains(line, "->") {
@@ -31,4 +37,16 @@ func ParseQuery(line string) []string {
 		nodes[i] = strings.TrimSpace(val)
 	}
 	return nodes
+}
+
+func Parse(src *bufio.Reader) {
+	for line, err := src.ReadString('\n'); err == nil; {
+		switch LineType(line) {
+		case EDGE:
+			k, v := ParseEdge(line)
+			Edges[k] = v
+		default:
+			fmt.Errorf("Unknown input \"%s\"\n", line)
+		}
+	}
 }

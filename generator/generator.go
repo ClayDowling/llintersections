@@ -64,12 +64,3 @@ func main() {
 		fmt.Printf("\n")
 	}
 }
-
-// a -> b
-// b -> c
-// c -> j
-// j -> k
-// x -> y
-// y -> c
-// a,c
-// a,x,z
