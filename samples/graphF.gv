@@ -1,0 +1,8 @@
+digraph intersection {
+  t -> c
+  x -> i
+  c -> x
+  h -> c
+  i -> h
+  o -> h
+}

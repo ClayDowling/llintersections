@@ -1,0 +1,19 @@
+f -> g
+g -> l
+h -> c
+j -> g
+n -> h
+o -> j
+q -> h
+d -> m
+m -> c
+e -> d
+b -> n
+c -> k
+k -> p
+a -> e
+p -> a
+r -> l
+i -> k
+i,j,f
+a,i,n,f

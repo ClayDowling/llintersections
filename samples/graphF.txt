@@ -1,0 +1,8 @@
+o -> h
+t -> c
+x -> i
+c -> x
+h -> c
+i -> h
+i,o,t,x
+t,h

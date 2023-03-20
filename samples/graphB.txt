@@ -1,0 +1,16 @@
+j -> h
+l -> h
+n -> l
+p -> x
+r -> b
+b -> d
+f -> b
+h -> t
+x -> l
+d -> t
+t -> r
+v -> r
+b,j,p,v
+j,r,v
+f,r
+b,n,r,t

@@ -1,7 +1,4 @@
 *.exe
-*.txt
-*.gv
-*.png
 *.zip
 llintersections
 .vscode/

@@ -1,0 +1,14 @@
+digraph intersection {
+  h -> t
+  x -> l
+  r -> b
+  b -> d
+  n -> l
+  p -> x
+  f -> b
+  d -> t
+  t -> r
+  v -> r
+  j -> h
+  l -> h
+}

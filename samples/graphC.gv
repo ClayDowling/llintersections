@@ -1,0 +1,10 @@
+digraph intersection {
+  a -> l
+  f -> a
+  g -> n
+  l -> g
+  n -> g
+  r -> n
+  u -> r
+  x -> a
+}

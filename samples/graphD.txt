@@ -1,0 +1,17 @@
+e -> g
+f -> i
+i -> m
+n -> a
+c -> h
+m -> d
+o -> l
+d -> c
+j -> d
+k -> d
+l -> j
+a -> e
+b -> l
+g -> h
+h -> k
+i,a
+n,a
