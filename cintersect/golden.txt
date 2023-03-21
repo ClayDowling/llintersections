@@ -1,0 +1,4 @@
+a,q,w: false
+a,c,r: true
+y,z,a,r: true
+a,w: false
