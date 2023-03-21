@@ -45,3 +45,24 @@ func TestSearch(t *testing.T) {
 	})
 
 }
+
+func TestIntersection(t *testing.T) {
+	src := bufio.NewScanner(strings.NewReader("a -> b\nb -> c\nc -> a\nd -> e\nf -> g\ng -> h"))
+	Parse(src)
+
+	t.Run("NodesInSameGraphIntersect", func(t *testing.T){
+		if Intersection([]string{"a","c"}) != true {
+			t.Error("Expected a,c to intersect")
+		}
+	})
+	t.Run("NodesInDifferentGraphsDoNotIntersect", func(t *testing.T){
+		if Intersection([]string{"b","e"}) {
+			t.Error("Did not expect b,e to intersect")
+		}
+	})
+	t.Run("MultipleNodesCanBeProcessed", func(t *testing.T){
+		if Intersection([]string{"a","e","h"}) {
+			t.Error("Did not expect a,e,h to intersect")
+		}
+	})
+}

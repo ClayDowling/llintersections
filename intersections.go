@@ -7,9 +7,11 @@ import (
 	"os"
 )
 
+type ResultSet []string
+
 type Search struct {
 	Current string
-	found   []string
+	Found   ResultSet
 	ended   bool
 }
 
@@ -24,7 +26,7 @@ func (s *Search) Advance() string {
 		return ""
 	}
 
-	s.found = append(s.found, s.Current)
+	s.Found = append(s.Found, s.Current)
 	s.Current = Edges[s.Current]
 
 	if s.Current == "" {
@@ -32,17 +34,45 @@ func (s *Search) Advance() string {
 		return ""
 	}
 
-	for _, v := range s.found {
-		if v == s.Current {
-			s.ended = true
-			return ""
-		}
+	if s.Found.Contains(s.Current) {
+		return ""
 	}
 
 	return s.Current
 }
 
-func Intersection([]string) bool {
+func (haystack *ResultSet) Contains(needle string) bool {
+	for _, v := range *haystack {
+		if v == needle {
+			return true
+		}
+	}
+	return false
+}
+
+func Intersection(question []string) bool {
+
+	nq := len(question)
+	found := []ResultSet{}
+	for _, q := range question {
+		a := NewSearch(q)
+		for a.Advance() != "" {
+		}
+		found = append(found, a.Found)
+	}
+
+	for i := 0; i < nq-1; i++ {
+		subject := found[i]
+		for j := i + 1; j < nq; j++ {
+			candidate := found[j]
+			for _, target := range candidate {
+				if subject.Contains(target) {
+					return true
+				}
+			}
+		}
+	}
+
 	return false
 }
 
