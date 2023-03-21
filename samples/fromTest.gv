@@ -1,0 +1,9 @@
+digraph intersection {
+  r -> s
+  b -> c
+  x -> c
+  q -> r
+  y -> x
+  w -> z
+  a -> b
+}
