@@ -17,3 +17,4 @@ r -> l
 i -> k
 i,j,f
 a,i,n,f
+l,m
