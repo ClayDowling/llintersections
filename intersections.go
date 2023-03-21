@@ -7,6 +7,41 @@ import (
 	"os"
 )
 
+type Search struct {
+	Current string
+	found   []string
+	ended   bool
+}
+
+func NewSearch(start string) Search {
+	s := Search{start, []string{}, false}
+	return s
+}
+
+func (s *Search) Advance() string {
+
+	if s.ended {
+		return ""
+	}
+
+	s.found = append(s.found, s.Current)
+	s.Current = Edges[s.Current]
+
+	if s.Current == "" {
+		s.ended = true
+		return ""
+	}
+
+	for _, v := range s.found {
+		if v == s.Current {
+			s.ended = true
+			return ""
+		}
+	}
+
+	return s.Current
+}
+
 func Intersection([]string) bool {
 	return false
 }
