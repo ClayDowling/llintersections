@@ -1,11 +1,26 @@
-a -> l
-f -> a
+c -> r
+d -> e
+j -> s
+o -> q
+s -> k
+v -> r
+b -> c
+f -> j
+h -> p
+q -> f
+r -> o
+a -> s
+m -> j
+p -> k
+t -> c
+u -> d
+e -> f
 g -> n
-l -> g
+i -> g
+k -> g
+l -> i
 n -> g
-r -> n
-u -> r
-x -> a
-u,x,g
-r,g
-x,n
+o,f,h,e
+s,q,m,k
+d,j,a,e
+o,l

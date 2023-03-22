@@ -1,8 +1,9 @@
-o -> h
-t -> c
-x -> i
-c -> x
-h -> c
-i -> h
-i,o,t,x
-t,h
+q -> n
+w -> a
+a -> h
+h -> q
+k -> n
+n -> a
+h,k,n,q
+h,q,a
+h,n,a
