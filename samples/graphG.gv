@@ -1,19 +1,19 @@
 digraph intersection {
-  g -> l
-  o -> j
-  d -> m
-  i -> k
-  j -> g
-  q -> h
-  c -> k
-  n -> h
-  b -> n
-  a -> e
-  r -> l
-  f -> g
+  a -> h
+  l -> i
+  n -> l
+  q -> a
+  c -> e
+  e -> q
+  f -> a
   h -> c
-  m -> c
-  e -> d
-  k -> p
+  b -> o
+  d -> n
+  g -> q
+  k -> b
+  i -> l
+  m -> a
+  o -> j
+  j -> f
   p -> a
 }
