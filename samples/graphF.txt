@@ -1,9 +1,18 @@
-q -> n
-w -> a
-a -> h
-h -> q
-k -> n
-n -> a
-h,k,n,q
-h,q,a
-h,n,a
+d -> n
+e
+k -> p
+m -> o
+g -> d
+h -> b
+i -> h
+p
+b -> o
+c -> n
+o
+a -> e
+f -> j
+j -> h
+l -> a
+n -> o
+f,e,g,b
+f,d,k,p

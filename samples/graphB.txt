@@ -1,8 +1,18 @@
-k -> v
-m -> k
-s -> f
-v -> m
-b -> v
-f -> m
-v,b,k
-v,m
+b -> n
+c -> n
+h -> d
+e -> n
+j -> k
+m -> h
+l -> f
+n -> k
+a -> d
+f
+i -> m
+d -> l
+g -> c
+k -> d
+m,a
+m,l,d
+m,i,k
+j,l,g

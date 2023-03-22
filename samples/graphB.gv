@@ -1,8 +1,15 @@
 digraph intersection {
-  k -> v
-  m -> k
-  s -> f
-  v -> m
-  b -> v
-  f -> m
+  b -> n
+  h -> d
+  j -> k
+  l -> f
+  i -> m
+  d -> l
+  k -> d
+  c -> n
+  e -> n
+  m -> h
+  n -> k
+  a -> d
+  g -> c
 }
