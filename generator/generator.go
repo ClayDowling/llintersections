@@ -34,18 +34,25 @@ func main() {
 	for k := range edges {
 		idx := random.Intn(N)
 		target := actualkeys[idx]
-		if target == k {
-			idx++
-			if idx == N {
-				idx = 0
+
+		if random.Intn(10) > 0 {
+			if target == k {
+				idx++
+				if idx == N {
+					idx = 0
+				}
+				target = actualkeys[idx]
 			}
-			target = actualkeys[idx]
+			edges[k] = target
 		}
-		edges[k] = target
 	}
 
 	for k, v := range edges {
-		fmt.Printf("%c -> %c\n", k, v)
+		if v == ' ' {
+			fmt.Printf("%c\n", k)
+		} else {
+			fmt.Printf("%c -> %c\n", k, v)
+		}
 	}
 
 	Q := random.Intn(3) + 2
